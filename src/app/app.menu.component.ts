@@ -30,7 +30,7 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Home',
                 items:[
-                    {label: 'Presentación',icon: 'pi pi-fw pi-home', routerLink: ['/']}
+                    {label: 'Dashboard',icon: 'pi pi-fw pi-home', routerLink: ['/']}
                 ]
             },
             {
@@ -84,12 +84,12 @@ export class AppMenuComponent implements OnInit {
                 label: 'Hierarchy',
                 items: [
                     {
-                        label: 'Submenu 1', icon: 'pi pi-fw pi-bookmark',
+                        label: 'Distribucion Normal', icon: 'pi pi-fw pi-bookmark',
                         items: [
                             {
                                 label: 'Submenu 1.1', icon: 'pi pi-fw pi-bookmark',
                                 items: [
-                                    {label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark'},
+                                    {label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark',routerLink: ['/distribucionMuestral']},
                                     {label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark'},
                                     {label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark'},
                                 ]
