@@ -169,7 +169,7 @@ export class AppMenuComponent implements OnInit {
                 label:'Get Started',
                 items:[
                     {
-                        label: 'Documentation', icon: 'pi pi-fw pi-question', routerLink: ['/documentation']
+                        label: 'Sobre Nosotros', icon: 'pi pi-users', routerLink: ['/documentation']
                     },
                     {
                         label: 'View Source', icon: 'pi pi-fw pi-search', url: ['https://github.com/primefaces/sakai-ng'], target: '_blank'
