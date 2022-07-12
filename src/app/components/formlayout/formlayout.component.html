@@ -1,108 +1,102 @@
 <div class="grid">
-	<div class="col-12 md:col-6">
-		<div class="card p-fluid">
-			<h5>Vertical</h5>
-			<div class="field">
-				<label htmlFor="name1">Name</label>
-				<input pInputText id="name1" type="text" />
-			</div>
-			<div class="field">
-				<label htmlFor="email1">Email</label>
-				<input pInputText id="email1" type="text" />
-			</div>
-			<div class="field">
-				<label htmlFor="age1">Age</label>
-				<input pInputText id="age1" type="text" />
-			</div>
+    <div class="col-12">
+        <div class="card docs">
+            <h3>Varianza</h3>
+            <p>La varianza es otra medida de qué tanto se alejan las observaciones <strong>x<sub>i</sub></strong>
+                  en relación al promedio y se mide en unidades cuadradas. Existen dos formas de calcular la varianza dependiendo de si estamos trabajando con una muestra o con la población.
+            </p>
+            <h3>Varianza muestral</h3>
+            <p>La varianza \(S^2\) mide la dispersión de los datos de una muestra <strong>x<sub>1, </sub></strong><strong>x<sub>2, </sub></strong><strong>x<sub>3, ... </sub></strong><strong>x<sub>n</sub></strong>respecto a la media (x), calculando la media de los cuadrados de las distancias de todos los datos</p>
+            <p>Antes de ver la fórmula de la varianza muestral, debemos decir que la varianza en estadística es muy importante. Ya que aunque se trata de una medida sencilla, puede aportar mucha información sobre una variable en concreto.</p>
+           
+            <h3>Fórmula para calcular la varianza muestral</h3>
+            <p>La unidad de medida de la varianza será siempre la unidad de medida correspondiente a los datos pero elevada al cuadrado. La varianza siempre es mayor o igual que cero \((s^2≥0)\). Al elevarse al cuadrado es matemáticamente imposible que la varianza muestral salga negativa, y de esa forma no puede ser menor que cero.</p>
+            <p>La varianza <strong>muestral</strong> se define así: </p>
+            <h4>$$S^2=∑(Xi-x̄)^2/(n-1)$$</h4>
+            <p>Donde</p>
+            <ul><li><strong>X:</strong> Variable sobre la que se pretenden calcular la varianza</li><li>
+                <strong>x<sub>i</sub>:</strong> i valor de la variable X.</li><li>
+                    <strong>n: </strong>Tamaño de la muestra.</li><li>
+                        <strong><em>x̄</em>:</strong> Es la media muestral.</li></ul>
 
-		</div>
-		
-		<div class="card p-fluid">
-			<h5>Vertical Grid</h5>
-			<div class="p-formgrid grid">
-				<div class="field col">
-					<label htmlFor="name2">Name</label>
-					<input pInputText id="name2" type="text" />
-				</div>
-				<div class="field col">
-					<label htmlFor="email2">Email</label>
-					<input pInputText id="email2" type="text" />
-				</div>
-			</div>
-		</div>
-	</div>
+            <h3>La varianza muestral con RStudio</h3>
+            <p>Para calcular la varianza muestral de una variable cuantitativa se usa la función <strong>var</strong>. 
+                Los argumentos básicos de la función <strong>var</strong> son dos y se muestran abajo.</p>
+<app-code  ngPreserveWhitespaces ngNonBindable lang="markup">
+var(x, na.rm = FALSE) 
+</app-code>
+<p>
+    En el parámetro <strong>x</strong> se indica la variable de interés para la cual se quiere calcular la varianza muestral, 
+    el parámetro <strong>na.rm</strong> es un valor lógico que en caso de ser <strong> TRUE </strong>, significa que se deben remover las observaciones con <strong>NA</strong>, 
+    el valor por defecto para este parámetro es <strong>FALSE</strong>.
+</p>
+<h4>Ejemplo</h4>
+<app-code  ngPreserveWhitespaces ngNonBindable lang="markup">
+hospital <- c(2,10,6,8,9)
+var (hospital, na.rm = FALSE)
+    </app-code>
+<app-code  ngPreserveWhitespaces ngNonBindable lang="markup">
+## [1] 10
+            </app-code> 
+<h4>Ejercicio</h4>
+<p>Calcule la varianza de los siguientes datos muestrales: 6, 8, 7, 10, 3, 5, 9, 8</p>
+<h4>Solución:</h4>
+<p>De acuerdo a los datos del problema tenemos:</p>
+<ul><li><strong>Σxᵢ:</strong> 56</li><li>
+    <strong>N:</strong> 8</li><li>
+            <strong><em>x̄</em>:</strong> 7</li>
+            <li><strong>Σ(xᵢ – x̄)²: </strong>36</li>
+        </ul>
+        <p>Finalmente calculamos la varianza muestral:</p>
+        <h4>$$S^2=36/7=5.1429$$</h4>
+<h4>Solución en Rstudio:</h4>
+<app-code  ngPreserveWhitespaces ngNonBindable lang="markup">
+Datos <- c(6,8,7,10,3,5,9,8)
+var (datos, na.rm = FALSE)
+        </app-code>
+        <app-code  ngPreserveWhitespaces ngNonBindable lang="markup">
+## [1] 5.142857
+                        </app-code> 
+ <p>------------------</p>
+ 
+ <h4>Desigualdad de Chebyshev</h4>
+<p>
+    La desigualdad de Chebyshev es un teorema utilizado en estadística que proporciona una estimación 
+    conservadora intervalo de confianza de la probabilidad de que una variable aleatoria con varianza 
+    finita se sitúe a una cierta distancia de su esperanza matemática o de su media.</p>
+    <p>Su expresión formal es la siguiente:</p>
+    <h4>$$P(|X-μ|>kϬ)≥1/(k^2)$$</h4>
+    <ul><li><strong>X:</strong> Valor estimado</li><li>
+        <strong>μ:</strong> Esperanza matemática</li>
+        <li><strong>Ϭ:</strong> Desviación típica del valor esperado</li>
+        <li><strong>k:</strong> úmero de desviaciones típicas</li>
+    </ul>
+    <p>Partiendo de esta expresión general y desarrollando la parte que queda dentro del valor absoluto tendríamos lo siguiente:</p>
+    <h4>$$P(μ-kϬ < X < μ+kϬ)≥1-1/(k^2)$$</h4>
+<p>Si prestamos atención a la expresión anterior, se aprecia que la parte de la izquierda no es más es un intervalo de confianza. Este nos ofrece tanto una cota inferior, como una superior para el valor estimado. Por lo tanto, la desigualdad de Chebyshev nos dice la probabilidad mínima de que el parámetro poblacional se encuentre dentro de una determinada cantidad de desviaciones típicas por encima o por debajo de su media. O dicho de otra manera, nos da la probabilidad de que de que el parámetro poblacional se encuentre dentro de ese intervalo de confianza</p>
+<p>
+    La desigualdad de Chebyshev proporciona cotas aproximadas para el valor estimado. A pesar de tener cierto grado de imprecisión, es un teorema bastante útil dado que se puede aplicar a un amplio abanico de variables aleatorias independientemente de sus distribuciones. La única restricción para poder utilizar esta desigualdad es que k tiene que ser mayor que 1 (k>1).
+</p>
 
-	<div class="col-12 md:col-6">
-		<div class="card p-fluid">
-			<h5>Horizontal</h5>
-			<div class="field grid">
-				<label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">Name</label>
-				<div class="col-12 md:col-10">
-					<input pInputText id="name3" type="text" />
-				</div>
-			</div>
-			<div class="field grid">
-				<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Email</label>
-				<div class="col-12 md:col-10">
-					<input pInputText id="email3" type="text" />
-				</div>
-			</div>
-		</div>
+<h4>Ejemplo de aplicación de la desigualdad de Chebyshev</h4>
+<p>Supongamos que somos gestores de un fondo de inversión. La cartera que estamos gestionando tiene una rentabilidad media del <strong>8,14%</strong> y una desviación típica del <strong>5,12%.</strong>. Para saber, por ejemplo, qué porcentaje de nuestros retornos se encuentran al menos a 3 desviaciones típicas de nuestra rentabilidad media simplemente aplicaríamos la formula anterior de la expresión 2.</p>
+<p><strong>k= 1,96</strong></p>
+<p>Sustituyendo el valor de k:</p> 
+<p>$$1-(1/1,96^2)= 0,739$$</p>
+<p>Esto quiere decir que hay un 73,9% de los resultados que están en el intervalo de confianza situado a 1,96 desviaciones típicas de la media.</p>
+<p>Realicemos el ejemplo anterior para valores distintos de k.</p>
+<p><strong>k= 2,46</strong></p>
+<p><strong>k= 3</strong></p>
+<p>Sustituyendo el valor de k:</p> 
+<p>$$1-(1/2,46^2)= 0,835$$</p>
+<p>$$1-(1/3^2)= 0,889$$</p>
+<p>Hay un 83,5% de los datos que están a una distancia de 2,46 desviaciones típicas de la media y un 88,9% que están a 3 desviaciones típicas de la media.</p>
+<p>Utilizando la desigualdad de Chebyshev, es sencillo deducir que a mayor valor de K (mayor desviación del valor estimado sobre su media) mayor probabilidad de que la variable aleatoria se encuentro dentro del intervalo acotado.</p>
 
-		<div class="card">
-			<h5>Inline</h5>
-			<div class="formgroup-inline">
-				<div class="field">
-					<label htmlFor="firstname1" class="p-sr-only">Firstname</label>
-					<input pInputText id="firstname1" type="text" placeholder="Firstname" />
-				</div>
-				<div class="field">
-					<label htmlFor="lastname1" class="p-sr-only">Lastname</label>
-					<input pInputText id="lastname1" type="text" placeholder="Lastname" />
-				</div>
-				<button pButton label="Submit"></button>
-			</div>
-		</div>
+<p>-------</p>
+<app-code ngPreserveWhitespaces ngNonBindable lang="markup">
 
-		<div class="card">
-			<h5>Help Text</h5>
-			<div class="field p-fluid">
-				<label htmlFor="username">Username</label>
-				<input pInputText id="username" type="text" />
-				<small>Enter your username to reset your password.</small>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-12">
-		<div class="card">
-			<h5>Advanced</h5>
-			<div class="p-fluid p-formgrid grid">
-				<div class="field col-12 md:col-6">
-					<label htmlFor="firstname2">Firstname</label>
-					<input pInputText id="firstname2" type="text" />
-				</div>
-				<div class="field col-12 md:col-6">
-					<label htmlFor="lastname2">Lastname</label>
-					<input pInputText id="lastname2" type="text" />
-				</div>
-				<div class="field col-12">
-					<label htmlFor="address">Address</label>
-					<input pInputTextarea id="address" rows="4" />
-				</div>
-				<div class="field col-12 md:col-6">
-					<label htmlFor="city">City</label>
-					<input pInputText id="city" type="text" />
-				</div>
-				<div class="field col-12 md:col-3">
-					<label htmlFor="state">State</label>
-					<p-dropdown [options]="dropdownItems" optionLabel="name" [(ngModel)]="selectedState"></p-dropdown>
-				</div>
-				<div class="field col-12 md:col-3">
-					<label htmlFor="zip">Zip</label>
-					<input pInputText id="zip" type="text" />
-				</div>
-			</div>
-		</div>
-	</div>
+</app-code>
+        </div>
+    </div>
 </div>
