@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-diferencia-de-medias',
   templateUrl: './diferencia-de-medias.component.html',
-  styleUrls: ['./diferencia-de-medias.component.scss']
+  styleUrls: ['./diferencia-de-medias.component.css']
 })
 export class DiferenciaDeMediasComponent implements OnInit {
 

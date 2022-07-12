@@ -84,7 +84,7 @@ export class AppMenuComponent implements OnInit {
                 label: 'Hierarchy',
                 items: [
                     {
-                        label: 'Distribucion Normal', icon: 'pi pi-fw pi-bookmark',
+                        label: 'Distribucion Muestral', icon: 'pi pi-fw pi-bookmark',
                         items: [
                             {
                                 label: 'Submenu 1.1', icon: 'pi pi-fw pi-bookmark',

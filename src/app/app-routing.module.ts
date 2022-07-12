@@ -28,9 +28,8 @@ import { LoginComponent } from './components/login/login.component';
 import { ErrorComponent } from './components/error/error.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AccessComponent } from './components/access/access.component';
-import { DistribucionMuestralComponent } from './components/distribucion-muestral/distribucion-muestral.component';
-import { DiferenciaDeMediasComponent} from './components/diferencia-de-medias/diferencia-de-medias.component';
-
+import { DistribucionMuestralComponent} from './components/distribucion-muestral/distribucion-muestral.component';
+import { DiferenciaDeMediasComponent} from './components/diferencia-de-medias/diferencia-de-medias.component'
 
 @NgModule({
     imports: [
