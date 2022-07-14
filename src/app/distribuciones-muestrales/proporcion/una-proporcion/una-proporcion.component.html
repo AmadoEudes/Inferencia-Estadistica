@@ -1,8 +1,125 @@
 <div class="grid">
-    <div class="col-12">
-        <div class="card">
-            <h4>Una proporcion</h4>
-            <p>This is your empty page template to start building beautiful applications.</p>
-        </div>
+    <div class="card">
+                
+        <h4>Distribución muestral de la Proporción</h4>
+
+        <p>
+            <p-panel header="Definición" [toggleable]="true" class="line-height-3 m-0">
+                <p>Sea <strong>X<sub>1</sub></strong>, <strong>X<sub>2</sub>, ...,<strong>X<sub>n</sub></strong></strong> 
+                    una muestra aleatoria de tamaño <strong>n</strong> extraída de la población Bernoullí <strong>B(1,</strong><em> p</em><strong>)</strong>, donde 
+                    <em>p</em> es el porcentaje de éxitos en la población y sea:</p>
+                    
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Varianza/una-varianza_01.png">
+                    </div>
+                
+                <p>la <strong>proporción de éxitos en la muestra</strong>, siendo, <strong>X = X<sub>1</sub>+<strong>X<sub>2</sub></strong>+...+<strong>X<sub>n</sub></strong></strong>
+                una variable binomial <strong>B(n, p)</strong>, entonces,</p>
+                <div class="">
+                    <img src="assets/demo/images/Formulas-Varianza/una-varianza_02.png">
+                </div>
+                <div class="">
+                    <img src="assets/demo/images/Formulas-Varianza/una-varianza_03.png">
+                </div>
+                <p>Si <em>n</em> es lo suficientemente grande, entonces la variable aleatoria:</p>
+                <div class="" align="center">
+                    <img src="assets/demo/images/Formulas-Varianza/una-varianza_04.png">
+                </div>
+                <p>tiene aproximadamente distribución <em>N</em>(0, 1)</p>
+            </p-panel>
+        </p>
+
+        <p-panel header="Notas" [toggleable]="true" class="line-height-3 m-0">
+            <ol type="1">
+                <li>
+                    <p>El <strong>error estándar</strong> de P es: </p>
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Varianza/una-varianza_05.png">
+                    </div>
+                </li>
+                <li>
+                    <p><strong>Si la población es finita de tamaño N</strong> y el muestreo es sin reposición el error estándar (desviación estándar de la hipergeométrica) es:</p>
+
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Varianza/una-varianza_06.png">
+                    </div>
+                    <p>Observar que si N es grande con respecto a <em>n</em> el factor de corrección se aproxima a la unidad</p>
+                    <p></p>
+                </li>
+                <li>
+                    <p>Si <em>n</em> es suficientemente grande (<em>n</em>&ge;30)</p>
+
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Varianza/una-varianza_07.png">
+                    </div>
+                    <p>Sin embargo arpoximaciones satisfactorias se obtienen si se introduce el <strong>factor de corrección por continuidad</strong> "1/2n". Luego,</p>
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Varianza/una-varianza_08.png">
+                    </div>
+
+                </li>
+                <li>
+                    <p>Observar que las dos expresiones de Z </p>
+
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Varianza/una-varianza_09.png">
+                    </div>
+                    <p>donde X es binomial y P es el porcentaje de éxitos en la muestra, tienen distribución <em>N</em>(0,1)</p>
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Varianza/una-varianza_08.png">
+                    </div>
+                    
+                </li>
+            </ol>
+
+        </p-panel>
+
+        <p-panel header="Ejercicios prácticos" [toggleable]="true" class="line-height-3 m-0">
+            <ol type="1">
+                <li>
+                    <p>La probabilidad de que un paciente se recupere de una rara enfermedad es 0.4.</p>
+                    <p>¿Cuál es la probabilidad de que en una muestra de 100 pacientes selecionados de una población de 1,000 que sufren la enfermedad, más del 30% sobrevivan?</p>
+
+                    
+                </li>
+                
+            </ol>
+
+            
+        </p-panel>
+        
+        <p-panel header="Soluciones" [toggleable]="true" class="line-height-3 m-0">
+            <ol type="1">
+                <li>
+                    <p>Sea P = X/100, la proporción de pacientes que se recuperan en la muestra de 100, donde X es el número de pacientes que se recuperan en la muestra de 100.</p>
+
+                    <p>Debido a que el muestreo es sin reposición, X tiene distribución de probabilidad hipergeométrica <em>H(1000, 400, 100)</em></p>
+                    <p>Para calcular P[P&gt;0.30] se pueden utilizar dos procesos. Uno de los métodos es la aproximación de la distribución hipergeométrica a la normal. En este caso:</p>
+
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Varianza/una-varianza_10.png">
+                    </div>
+                    <p>tiene distribución aproximadamente normal <em>N(0,1).</em></p>
+                    <p>El otro método es utilizar la distribución muestral de proporciones, en este caso:</p>
+
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Varianza/una-varianza_11.png">
+                    </div>
+                    <p>tiene también distribución aproximadamente normal <em>N(0,1)</em></p>
+                    <p>Utilizando la distribución de la proporción muestral, se tiene:</p>
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Varianza/una-varianza_12.png">
+                    </div>
+                    <p>en donde, </p>
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Varianza/una-varianza_13.png">
+                    </div>
+
+                </li>
+                
+            </ol>
+        </p-panel>
     </div>
+        
 </div>
+

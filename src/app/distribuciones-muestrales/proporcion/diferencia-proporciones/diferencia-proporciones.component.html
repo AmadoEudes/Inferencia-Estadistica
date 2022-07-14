@@ -1,8 +1,79 @@
 <div class="grid">
-    <div class="col-12">
-        <div class="card">
-            <h4>Diferencia de proporciones</h4>
-            <p>This is your empty page template to start building beautiful applications.</p>
-        </div>
+    <div class="card">
+                
+        <h4>Distribución muestral de la diferencia de dos proporciones</h4>
+
+        <p>
+            <p-panel header="Definición" [toggleable]="true" class="line-height-3 m-0">
+                <p>Sean <strong>X<sub>1</sub></strong>, <strong>X<sub>2</sub>, ...,<strong>X<sub>n<sub>1</sub></sub></strong></strong> e 
+                <strong>Y<sub>1</sub></strong>, <strong>Y<sub>2</sub>, ...,<strong>Y<sub>n<sub>2</sub></sub></strong></strong> 
+                dos muestras aleatorias independientes de tamaños <strong>n <sub>1</sub></strong> y <strong>n <sub>2</sub></strong> seleccionadas respectivamente
+                de dos poblaciones independientes de <strong>Bernoullí</strong> <strong>B(1,</strong><em> p</em><sub>1</sub><strong>)</strong> y <strong>B(1,</strong><em> p</em><sub>2</sub><strong>)</strong>
+                donde <em> p</em><sub>1</sub> y <em> p</em><sub>2</sub> son las proporciones poblaciones de éxito respectivos. Sean las proporciones muestrales</p>
+                <div class="" align="center">
+                    <img src="assets/demo/images/Formulas-Diferencia-Proporciones/diferencia-proporcion_01.png">
+                </div>
+                <p>Donde:</p>
+                <div class="">
+                    <img src="assets/demo/images/Formulas-Diferencia-Proporciones/diferencia-proporcion_02.png">
+                </div>
+                <p>Entonces, la variable aleatoria P<sub>1</sub> - P<sub>2</sub> tiene una distribución de probabilidad cuyas propiedades son las siguientes:</p>
+
+                <div class="">
+                    <img src="assets/demo/images/Formulas-Diferencia-Proporciones/diferencia-proporcion_03.png">
+                </div>
+                <div class="">
+                    <img src="assets/demo/images/Formulas-Diferencia-Proporciones/diferencia-proporcion_04.png">
+                </div>
+
+                <p><strong>Para <em>n<sub>1</sub></em> y <em>n<sub>2</sub></em> suficientemente grandes</strong>, la variable aleatoria estándar:</p>
+                <div class="" align="center">
+                    <img src="assets/demo/images/Formulas-Diferencia-Proporciones/diferencia-proporcion_05.png">
+                </div>
+                <p>tiene distribución aproximadamente <em>N</em>(0,1), donde el <em>error estándar</em> está dado por:</p>
+                <div class="" align="center">
+                    <img src="assets/demo/images/Formulas-Diferencia-Proporciones/diferencia-proporcion_06.png">
+                </div>
+
+                <p></p>
+
+            </p-panel>
+        </p>
+
+        <p-panel header="Ejercicios prácticos" [toggleable]="true" class="line-height-3 m-0">
+            <ol type="1">
+                <li>
+                    <p>Dos amigos A y B juegan "cara" o "sello" con una moneda. Suponga que en este juego, cada uno lanza la moneda 35 veces y que uno de ellos gana si
+                        obtiene 7 caras más que el otro. Calcular la probabilidad de que B gane el juego.
+                    </p>
+                    
+                </li>
+                
+            </ol>
+
+            
+        </p-panel>
+        
+        <p-panel header="Soluciones" [toggleable]="true" class="line-height-3 m-0">
+            <ol type="1">
+                <li>
+                    <p>Sea X el número de caras que saca el jugador A en las 35 tiradas y sea Y el número de caras que saca el jugador B en las 35 tiradas, entonces, cada variable
+                        tiene distribución <em>B</em>(35,0.5), donde <em>p</em> es la probabilidad de obtener cara en cada tirada de los jugadores.
+                    </p>
+                    <p>Sean P<sub>1</sub> = X/35 y P <sub>2</sub>=Y/35 las proporciones de caras de los jugadores A y B respectivamente. El jugador B gana el juego si saca 7
+                    caras más que A o si su proporción de caras es 7/35 = 0.2 más que A. Luego, la probabilidad de que B gane el juego es:</p>
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Diferencia-Proporciones/diferencia-proporcion_07.png">
+                    </div>
+                    <p>Donde:</p>
+                    <div class="" align="center">
+                        <img src="assets/demo/images/Formulas-Diferencia-Proporciones/diferencia-proporcion_08.png">
+                    </div>
+                </li>
+                
+            </ol>
+        </p-panel>
     </div>
+        
 </div>
+
