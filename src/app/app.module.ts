@@ -152,6 +152,11 @@ import { PoblacionInfinitaComponent } from './distribuciones-muestrales/media/po
 import { PoblacionFinitaComponent } from './distribuciones-muestrales/media/poblacion-finita/poblacion-finita.component';
 import { DiferenciaMediasComponent } from './distribuciones-muestrales/media/diferencia-medias/diferencia-medias.component';
 
+import {KatexModule} from 'ng-katex';
+import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
+import { PresentacionComponent } from './presentacion/presentacion.component';
+import { PaginasRecomendadasComponent } from './paginas-recomendadas/paginas-recomendadas.component';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -194,6 +199,7 @@ import { DiferenciaMediasComponent } from './distribuciones-muestrales/media/dif
         InputTextModule,
         InputTextareaModule,
         KnobModule,
+        
         LightboxModule,
         ListboxModule,
         MegaMenuModule,
@@ -295,6 +301,9 @@ import { DiferenciaMediasComponent } from './distribuciones-muestrales/media/dif
         PoblacionInfinitaComponent,
         PoblacionFinitaComponent,
         DiferenciaMediasComponent,
+        SobreNosotrosComponent,
+        PresentacionComponent,
+        PaginasRecomendadasComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
