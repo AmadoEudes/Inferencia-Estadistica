@@ -82,7 +82,9 @@ export class AppMenuComponent implements OnInit {
                     {
                         label: 'Sobre Nosotros', icon: 'pi pi-users', routerLink: ['/sobre-nosotros']
                     },
-                    
+                    {
+                        label: 'Repositorio', icon: 'pi pi-github', url: ['https://github.com/AmadoEudes/Inferencia-Estadistica']
+                    },
                 ]
             }
         ];
