@@ -148,6 +148,9 @@ import { DiferenciaProporcionesComponent } from './distribuciones-muestrales/pro
 import { UnaVarianzaComponent } from './distribuciones-muestrales/varianza/una-varianza/una-varianza.component';
 import { RazonVarianzasComponent } from './distribuciones-muestrales/varianza/razon-varianzas/razon-varianzas.component';
 import { DesigualdadChebyshevComponent } from './distribuciones-muestrales/desigualdad-chebyshev/desigualdad-chebyshev.component';
+import { PoblacionInfinitaComponent } from './distribuciones-muestrales/media/poblacion-infinita/poblacion-infinita.component';
+import { PoblacionFinitaComponent } from './distribuciones-muestrales/media/poblacion-finita/poblacion-finita.component';
+import { DiferenciaMediasComponent } from './distribuciones-muestrales/media/diferencia-medias/diferencia-medias.component';
 
 @NgModule({
     imports: [
@@ -289,6 +292,9 @@ import { DesigualdadChebyshevComponent } from './distribuciones-muestrales/desig
         UnaVarianzaComponent,
         RazonVarianzasComponent,
         DesigualdadChebyshevComponent,
+        PoblacionInfinitaComponent,
+        PoblacionFinitaComponent,
+        DiferenciaMediasComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

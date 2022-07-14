@@ -36,6 +36,8 @@ import { DiferenciaProporcionesComponent } from './distribuciones-muestrales/pro
 import { UnaVarianzaComponent } from './distribuciones-muestrales/varianza/una-varianza/una-varianza.component';
 import { RazonVarianzasComponent } from './distribuciones-muestrales/varianza/razon-varianzas/razon-varianzas.component';
 import { DesigualdadChebyshevComponent } from './distribuciones-muestrales/desigualdad-chebyshev/desigualdad-chebyshev.component';
+import { DiferenciaMediasComponent } from './distribuciones-muestrales/media/diferencia-medias/diferencia-medias.component';
+import { DistribucionesMuestralesComponent } from './distribuciones-muestrales/distribuciones-muestrales.component';
 @NgModule({
     imports: [
         RouterModule.forRoot([
@@ -66,11 +68,11 @@ import { DesigualdadChebyshevComponent } from './distribuciones-muestrales/desig
                     {path: 'blocks', component: BlocksComponent},
                     {path: 'documentation', component: DocumentationComponent},
 
-                    {path: 'dist-muestral',component: DistribucionMuestralComponent},
+                    {path: 'dist-muestral',component: DistribucionesMuestralesComponent},
 
                     {path: 'dist-muestral/poblacion-infinita', component: EmptyComponent},
 
-                    {path: 'dist-muestral/diferenciaMedias',component: DiferenciaDeMediasComponent},
+                    {path: 'dist-muestral/diferenciaMedias',component: DiferenciaMediasComponent},
                     
                     {path: 'documentation', component: DocumentationComponent},
 

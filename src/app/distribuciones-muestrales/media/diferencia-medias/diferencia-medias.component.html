@@ -1,0 +1,242 @@
+<div>
+    <div class="card">
+        <h5>
+            <b
+                ><p style="text-align: center">
+                    DIFERENCIA DE MEDIAS MUESTRALES
+                </p></b
+            >
+        </h5>
+        <p-accordion>
+            <p-accordionTab
+                style="text-align: justify"
+                header="¿QUÉ ES LA DIFERENCIA DE MEDIAS?"
+                [selected]="true"
+                class="line-height-3 m-0"
+            >
+                <p>
+                    De manera general, en el contraste de hipótesis se parte de
+                    un supuesto de igualdad de los dos parámetros que queremos
+                    comparar, supuesto al que denominamos hipótesis nula. Una
+                    vez obtenidos los parámetros, calcularemos la probabilidad
+                    de que, bajo el supuesto de la hipótesis nula, la diferencia
+                    que observemos entre ellos sea debida a error aleatorio o de
+                    muestreo. Si esta probabilidad es inferior a un determinado
+                    valor que, por convenio, suele situarse en 0.05, asumiremos
+                    que la probabilidad de que la diferencia se deba al azar es
+                    lo suficientemente baja como para rechazar la hipótesis nula
+                    y considerar como cierta la hipótesis alternativa de
+                    desigualdad (contraste bilateral) o de superioridad o
+                    inferioridad de uno de los parámetros (contraste
+                    unilateral).
+                </p>
+                <p>
+                    Cuando queremos comparar dos parámetros de dos grupos
+                    diferentes, solemos utilizar un estadístico que se relacione
+                    con el parámetro y cuyos valores sigan una distribución de
+                    probabilidad conocida. Así, los pasos para realizar la
+                    comparación serán siempre los mismos: establecer la
+                    hipótesis nula de igualdad de los parámetros, seleccionar el
+                    estadístico adecuado para cada situación, utilizar la
+                    distribución de probabilidad correspondiente para calcular
+                    la probabilidad de ese valor del estadístico que hemos
+                    empleado y, según este valor de probabilidad, decidirnos en
+                    favor de la hipótesis nula o de la alternativa que hayamos
+                    elegido, unilateral o bilateral.
+                </p>
+            </p-accordionTab>
+
+            <p-accordionTab
+                style="text-align: justify"
+                header="DIFERENCIA DE MEDIAS CON UN VALOR DE REFENCIA"
+                [selected]="true"
+                class="line-height-3 m-0"
+            >
+                El problema más sencillo es el de comparar la media de un
+                parámetro obtenido en una muestra con un valor de referencia de
+                una población conocida. Esto nos permitirá, por un lado, decidir
+                si es razonable concluir que la muestra puede pertenecer a la
+                población o bien, por otro lado, contrastar hipótesis sobre la
+                media poblacional a partir de la obtenida en la muestra. Aunque
+                es posible comparar dos medias utilizando la distribución
+                normal, para ello necesitamos conocer la desviación estándar
+                poblacional del parámetro, que suele ser desconocida. En estos
+                casos utilizamos, como aproximación a la desviación estándar
+                poblacional (σ), la de la muestra (s), remplazando las
+                probabilidades de la distribución normal por las de la t de
+                Student, que varían en función del tamaño muestral (los grados
+                de libertad). En cualquier caso, cuando el tamaño muestral es
+                grande, el valor de probabilidad obtenido mediante la t de
+                Student se aproxima al obtenido con la distribución normal. En
+                la práctica, calculamos el intervalo de confianza de la media
+                poblacional, ya sea utilizando la distribución normal o la t de
+                Student con n-1 grados de libertad (siendo n el tamaño de la
+                muestra), y comprobamos si el intervalo incluye el valor de
+                referencia. La fórmula para el cálculo del intervalo de
+                confianza, utilizando la normal o la t de Student,
+                respectivamente, sería:
+                <p></p>
+
+                <p-fieldset
+                    legend="Fórmulas"
+                    toggleable="true"
+                    class="line-height-3 m-0"
+                >
+                <div class="formula1">
+                    <img src="assets/demo/images/formulas-sarai/Formula1.png">
+                </div>
+                    
+                </p-fieldset>
+            </p-accordionTab>
+
+            <p-accordionTab
+                style="text-align: justify"
+                header="DIFERENCIA DE MEDIAS INDEPENDIENTES"
+                [selected]="true"
+                class="line-height-3 m-0"
+            >
+                El supuesto más habitual es el de contrastar si hay una
+                diferencia significativa en la media de una variable de
+                resultado entre dos poblaciones diferentes e independientes. En
+                estos casos, lo habitual es utilizar la prueba de la t de
+                Student para dos muestras independientes. Esta prueba compara
+                las dos medias de una variable de resultado cuantitativo
+                continuo obtenidas en dos categorías definidas por una variable
+                cualitativa. Se basa en el cálculo del estadístico t, que tiene
+                en cuenta la diferencia de medias a comparar y su error
+                estándar, según la siguiente fórmula:
+
+                <p></p>
+
+                <p-fieldset
+                    legend="Fórmulas"
+                    toggleable="true"
+                    class="line-height-3 m-0"
+                >
+                <div class="formula2">
+                    <img src="assets/demo/images/formulas-sarai/Formula2.png">
+                </div>
+
+                    <p>Siendo:</p>
+                    <div class="formula3">
+                        <img src="assets/demo/images/formulas-sarai/formula3.png">
+                    </div>
+                    <p>
+                        las medias y las varianzas de las dos muestras
+                        respectivamente.
+                    </p>
+                </p-fieldset>
+
+                <p style="text-align: justify"></p>
+                Bajo el supuesto de la hipótesis nula, la diferencia de medias
+                es igual a cero, con lo que el valor de t será también igual a
+                cero. Cuanto más se aleje t de ese valor, menos probable será
+                que la diferencia observada se deba al azar.
+                <p style="text-align: justify">
+                    Para poder aplicar esta prueba, debemos verificar
+                    previamente que se cumplen tres condiciones:
+                </p>
+                <ol style="text-align: justify">
+                    <li>
+                        Los dos grupos deben ser independientes. Esto quiere
+                        decir que cada participante debe pertenecer a solo uno
+                        de los dos grupos y no tiene relación con los
+                        participantes del otro grupo.
+                    </li>
+                    <li>
+                        La variable de resultado debe ser continua y seguir una
+                        distribución normal en los dos grupos.
+                    </li>
+                    <li>
+                        Debe cumplirse el supuesto de homocedasticidad, esto es,
+                        igualdad de varianzas en los dos grupos
+                    </li>
+                </ol>
+                .
+            </p-accordionTab>
+
+            <p-accordionTab
+                style="text-align: justify"
+                header="DIFERENCIA DE MEDIAS DEPENDIENTES O RELACIONADAS"
+                [selected]="true"
+                class="line-height-3 m-0"
+            >
+                <p>
+                    En ocasiones se plantea el problema de comparar las medias
+                    de dos grupos que están relacionados, como puede ser el caso
+                    de medidas obtenidas del mismo participante en diferentes
+                    momentos, de diferentes localizaciones de la misma persona
+                    (por ejemplo, presión intraocular de ojo derecho e
+                    izquierdo) o cuando se comparan los datos de cada caso con
+                    su correspondiente control emparejado. Esto es muy típico de
+                    los estudios longitudinales, los estudios de antes-después
+                    de una intervención y los estudios de casos y controles.
+                </p>
+                <p>
+                    En estos casos no existe una variable que defina los grupos,
+                    sino que la variable de resultado que se valorará será las
+                    diferencias entre los dos resultados de cada pareja,
+                    suponiendo la hipótesis nula que la media de estas
+                    diferencias es igual a cero. Así, en este tipo de análisis
+                    el interés no se centra en las diferencias entre individuos,
+                    sino en las que puede haber en el mismo individuo en dos
+                    momentos diferentes o entre las observaciones de los
+                    individuos relacionados.
+                </p>
+                <p>
+                    La prueba que empleamos en estos casos es la de la t de
+                    Student para medidas repetidas (datos apareados o
+                    relacionados). Para poder aplicarla, debe cumplirse que la
+                    variable de interés sea cuantitativa continua, que la
+                    muestra de pares de datos haya sido obtenida al azar de la
+                    población y que la diferencia entre las parejas se
+                    distribuya de forma normal. Lógicamente, en este caso no
+                    tiene sentido plantear si hay igualdad de varianzas, ya que
+                    se trata de los mismos participantes en los dos grupos.
+                </p>
+                <p>
+                    El planteamiento de la prueba es similar al de la t de
+                    Student para medias independientes, solo que en este caso se
+                    genera una nueva variable a partir de las dos medidas a
+                    comparar:
+                </p>
+                <p></p>
+
+                <p-fieldset
+                    legend="Fórmulas"
+                    toggleable="true"
+                    class="line-height-3 m-0"
+                >
+                <div class="formula4">
+                    <img src="assets/demo/images/formulas-sarai/Formula4.png">
+                </div>
+                    <p style="text-align: justify">
+                        donde di es la diferencia de resultado de cada pareja en
+                        dos instantes diferentes, x1 y x2.
+                    </p>
+
+                    <p style="text-align: justify">
+                        En este análisis, el estadístico t se obtiene con la
+                        media y la desviación estándar de esta variable, según
+                        la siguiente ecuación:
+                    </p>
+                    <div class="formula5">
+                        <img src="assets/demo/images/formulas-sarai/Formula5.png">
+                    </div>
+                </p-fieldset>
+                <p>
+                    
+                </p>
+                <p>
+                    El contraste bilateral plantea la hipótesis nula de que la
+                    diferencia es igual a 0. En este caso, los grados de
+                    libertad son n-1, siendo n el tamaño de la muestra. Como en
+                    el caso de muestras independientes, si la hipótesis nula es
+                    cierta el valor de la diferencia será cero, por lo que t
+                    valdrá cero. Cuanto mayor sea el valor de t, menos probable
+                    será que la diferencia observada se deba al azar.
+                </p>
+            </p-accordionTab>
+        </p-accordion>
+    </div>
+</div>
