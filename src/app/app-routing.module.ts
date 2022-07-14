@@ -61,12 +61,14 @@ import { DesigualdadChebyshevComponent } from './distribuciones-muestrales/desig
                     {path: 'uikit/file', component: FileComponent},
                     {path: 'pages/crud', component: CrudComponent},
                     {path: 'pages/timeline', component: TimelineComponent},
-                    {path: 'pages/empty', component: EmptyComponent},
+                    
                     {path: 'icons', component: IconsComponent},
                     {path: 'blocks', component: BlocksComponent},
                     {path: 'documentation', component: DocumentationComponent},
 
                     {path: 'dist-muestral',component: DistribucionMuestralComponent},
+
+                    {path: 'dist-muestral/poblacion-infinita', component: EmptyComponent},
 
                     {path: 'dist-muestral/diferenciaMedias',component: DiferenciaDeMediasComponent},
                     
