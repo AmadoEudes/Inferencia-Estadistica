@@ -46,7 +46,7 @@ export class AppMenuComponent implements OnInit {
                                 label: 'La Media', icon: 'pi pi-fw pi-bookmark',
                                 items: [
                                     {label: 'Población Infinita', icon: 'pi pi-fw pi-bookmark', routerLink: ['/dist-muestral/poblacion-infinita']},
-                                    {label: 'Población finita', icon: 'pi pi-fw pi-bookmark'},
+                                    {label: 'Población Finita', icon: 'pi pi-fw pi-bookmark', routerLink: ['/dist-muestral/poblacion-finita']},
                                     {label: 'Diferencia de Medias', icon: 'pi pi-fw pi-bookmark', routerLink: ['/dist-muestral/diferenciaMedias']},
                                 ]
                             },

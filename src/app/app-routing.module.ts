@@ -38,6 +38,8 @@ import { RazonVarianzasComponent } from './distribuciones-muestrales/varianza/ra
 import { DesigualdadChebyshevComponent } from './distribuciones-muestrales/desigualdad-chebyshev/desigualdad-chebyshev.component';
 import { DiferenciaMediasComponent } from './distribuciones-muestrales/media/diferencia-medias/diferencia-medias.component';
 import { DistribucionesMuestralesComponent } from './distribuciones-muestrales/distribuciones-muestrales.component';
+import { PoblacionFinitaComponent } from './distribuciones-muestrales/media/poblacion-finita/poblacion-finita.component';
+import { PoblacionInfinitaComponent } from './distribuciones-muestrales/media/poblacion-infinita/poblacion-infinita.component';
 @NgModule({
     imports: [
         RouterModule.forRoot([
@@ -70,7 +72,8 @@ import { DistribucionesMuestralesComponent } from './distribuciones-muestrales/d
 
                     {path: 'dist-muestral',component: DistribucionesMuestralesComponent},
 
-                    {path: 'dist-muestral/poblacion-infinita', component: EmptyComponent},
+                    {path: 'dist-muestral/poblacion-infinita', component: PoblacionInfinitaComponent},
+                    {path: 'dist-muestral/poblacion-finita', component: PoblacionFinitaComponent},
 
                     {path: 'dist-muestral/diferenciaMedias',component: DiferenciaMediasComponent},
                     
