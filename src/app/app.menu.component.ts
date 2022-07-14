@@ -61,7 +61,7 @@ export class AppMenuComponent implements OnInit {
                                 label: 'La varianza', icon: 'pi pi-fw pi-bookmark',
                                 items: [
                                     {label: 'Para una Varianza', icon: 'pi pi-fw pi-bookmark', routerLink: ['/dist-muestral/una-varianza']},
-                                    {label: 'Razón de dos Varianzas', icon: 'pi pi-fw pi-bookmark', routerLink: ['/dist-muestral/razon-varianzas']},
+                                    
                                 ]
                             },
                             {
