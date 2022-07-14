@@ -142,6 +142,9 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AccessComponent } from './components/access/access.component';
 import { DistribucionMuestralComponent } from './components/distribucion-muestral/distribucion-muestral.component';
 import { DiferenciaDeMediasComponent } from './components/diferencia-de-medias/diferencia-de-medias.component';
+import { DistribucionesMuestralesComponent } from './distribuciones-muestrales/distribuciones-muestrales.component';
+import { UnaProporcionComponent } from './distribuciones-muestrales/proporcion/una-proporcion/una-proporcion.component';
+import { DiferenciaProporcionesComponent } from './distribuciones-muestrales/proporcion/diferencia-proporciones/diferencia-proporciones.component';
 
 @NgModule({
     imports: [
@@ -277,6 +280,9 @@ import { DiferenciaDeMediasComponent } from './components/diferencia-de-medias/d
         AccessComponent,
         DistribucionMuestralComponent,
         DiferenciaDeMediasComponent,
+        DistribucionesMuestralesComponent,
+        UnaProporcionComponent,
+        DiferenciaProporcionesComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

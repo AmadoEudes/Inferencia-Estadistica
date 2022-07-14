@@ -31,6 +31,8 @@ import { AccessComponent } from './components/access/access.component';
 import { DistribucionMuestralComponent} from './components/distribucion-muestral/distribucion-muestral.component';
 import { DiferenciaDeMediasComponent} from './components/diferencia-de-medias/diferencia-de-medias.component'
 
+import { UnaProporcionComponent } from './distribuciones-muestrales/proporcion/una-proporcion/una-proporcion.component';
+import { DiferenciaProporcionesComponent } from './distribuciones-muestrales/proporcion/diferencia-proporciones/diferencia-proporciones.component';
 @NgModule({
     imports: [
         RouterModule.forRoot([
@@ -62,6 +64,11 @@ import { DiferenciaDeMediasComponent} from './components/diferencia-de-medias/di
                     {path: 'documentation', component: DocumentationComponent},
                     {path: 'distribucionMuestral',component: DistribucionMuestralComponent},
                     {path: 'diferenciaMedias',component: DiferenciaDeMediasComponent},
+                    {path: 'documentation', component: DocumentationComponent},
+
+                    {path: 'dist-muestral/una-proporcion', component: UnaProporcionComponent},
+                    {path: 'dist-muestral/diferencia-proporciones', component: DiferenciaProporcionesComponent},
+
                 ],
             },
             {path:'pages/landing', component: LandingComponent},

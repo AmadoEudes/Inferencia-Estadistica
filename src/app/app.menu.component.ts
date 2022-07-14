@@ -12,9 +12,7 @@ import { AppMainComponent } from './app.main.component';
                         <li app-menuitem *ngFor="let child of item.items" [item]="child" [index]="i" role="none"></li>
                     </ul>
                 </li>
-                <a href="https://www.primefaces.org/primeblocks-ng/#/">
-                    <img src="assets/layout/images/{{appMain.config.dark ? 'banner-primeblocks-dark' : 'banner-primeblocks'}}.png" alt="Prime Blocks" class="w-full mt-3"/>
-                </a>
+                
             </ul>
         </div>
     `
@@ -33,6 +31,48 @@ export class AppMenuComponent implements OnInit {
                     {label: 'Dashboard',icon: 'pi pi-fw pi-home', routerLink: ['/']}
                 ]
             },
+
+            {
+                label: 'Inferencia Estadística',
+                items: [
+                    {
+                        label: 'Distribuciones Muestrales', icon: 'pi pi-fw pi-bookmark',
+                        items: [
+                            {
+                                label: 'Introducción', icon: 'pi pi-fw pi-bookmark',routerLink: ['/dist-muestral/una-proporcion'],
+                                
+                            },
+                            {
+                                label: 'La Media', icon: 'pi pi-fw pi-bookmark',
+                                items: [
+                                    {label: 'Población Infinita', icon: 'pi pi-fw pi-bookmark'},
+                                    {label: 'Población finita', icon: 'pi pi-fw pi-bookmark'},
+                                    {label: 'Diferencia de Medias', icon: 'pi pi-fw pi-bookmark'},
+                                ]
+                            },
+                            {
+                                label: 'La Proporción', icon: 'pi pi-fw pi-bookmark',
+                                items: [
+                                    {label: 'Para una Proporción', icon: 'pi pi-fw pi-bookmark', routerLink: ['/dist-muestral/una-proporcion']},
+                                    {label: 'Diferencia de dos Proporciones', icon: 'pi pi-fw pi-bookmark', routerLink: ['/dist-muestral/diferencia-proporciones']},
+                                ]
+                            },
+                            {
+                                label: 'La varianza', icon: 'pi pi-fw pi-bookmark',
+                                items: [
+                                    {label: 'Para una Varianza', icon: 'pi pi-fw pi-bookmark'},
+                                    {label: 'Razón de dos Varianzas', icon: 'pi pi-fw pi-bookmark'},
+                                ]
+                            },
+                            {
+                                label: 'Desigualdad de Chebyshev', icon: 'pi pi-fw pi-bookmark',
+                            },
+                            
+                        ]
+                    },
+                ]
+            },
+
             {
                 label: 'UI Components',
                 items: [
@@ -91,6 +131,8 @@ export class AppMenuComponent implements OnInit {
                                 items: [
                                     {label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark',routerLink: ['/distribucionMuestral']},
                                     {label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark'},
+                                    {label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark', routerLink: ['/']},
+                                    {label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark', routerLink: ['/pages/submenu']},
                                     {label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark'},
                                 ]
                             },
@@ -122,6 +164,7 @@ export class AppMenuComponent implements OnInit {
                     }
                 ]
             },
+            
             {
                 label:'Get Started',
                 items:[
