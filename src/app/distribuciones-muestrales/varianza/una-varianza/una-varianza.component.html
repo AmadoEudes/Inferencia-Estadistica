@@ -1,0 +1,62 @@
+<div class="grid">
+    <div class="col-12">
+        <div class="card docs">
+            <h3>Varianza</h3>
+            <p>La varianza es otra medida de qué tanto se alejan las observaciones <strong>x<sub>i</sub></strong>
+                  en relación al promedio y se mide en unidades cuadradas. Existen dos formas de calcular la varianza dependiendo de si estamos trabajando con una muestra o con la población.
+            </p>
+            <h3>Varianza muestral</h3>
+            <p>La varianza \(S^2\) mide la dispersión de los datos de una muestra <strong>x<sub>1, </sub></strong><strong>x<sub>2, </sub></strong><strong>x<sub>3, ... </sub></strong><strong>x<sub>n</sub></strong>respecto a la media (x), calculando la media de los cuadrados de las distancias de todos los datos</p>
+            <p>Antes de ver la fórmula de la varianza muestral, debemos decir que la varianza en estadística es muy importante. Ya que aunque se trata de una medida sencilla, puede aportar mucha información sobre una variable en concreto.</p>
+           
+            <h3>Fórmula para calcular la varianza muestral</h3>
+            <p>La unidad de medida de la varianza será siempre la unidad de medida correspondiente a los datos pero elevada al cuadrado. La varianza siempre es mayor o igual que cero \((s^2≥0)\). Al elevarse al cuadrado es matemáticamente imposible que la varianza muestral salga negativa, y de esa forma no puede ser menor que cero.</p>
+            <p>La varianza <strong>muestral</strong> se define así: </p>
+            <h4>$$S^2=∑(Xi-x̄)^2/(n-1)$$</h4>
+            <p>Donde</p>
+            <ul><li><strong>X:</strong> Variable sobre la que se pretenden calcular la varianza</li><li>
+                <strong>x<sub>i</sub>:</strong> i valor de la variable X.</li><li>
+                    <strong>n: </strong>Tamaño de la muestra.</li><li>
+                        <strong><em>x̄</em>:</strong> Es la media muestral.</li></ul>
+
+            <h3>La varianza muestral con RStudio</h3>
+            <p>Para calcular la varianza muestral de una variable cuantitativa se usa la función <strong>var</strong>. 
+                Los argumentos básicos de la función <strong>var</strong> son dos y se muestran abajo.</p>
+<app-code  ngPreserveWhitespaces ngNonBindable lang="markup">
+var(x, na.rm = FALSE) 
+</app-code>
+<p>
+    En el parámetro <strong>x</strong> se indica la variable de interés para la cual se quiere calcular la varianza muestral, 
+    el parámetro <strong>na.rm</strong> es un valor lógico que en caso de ser <strong> TRUE </strong>, significa que se deben remover las observaciones con <strong>NA</strong>, 
+    el valor por defecto para este parámetro es <strong>FALSE</strong>.
+</p>
+<h4>Ejemplo</h4>
+<app-code  ngPreserveWhitespaces ngNonBindable lang="markup">
+hospital <- c(2,10,6,8,9)
+var (hospital, na.rm = FALSE)
+    </app-code>
+<app-code  ngPreserveWhitespaces ngNonBindable lang="markup">
+## [1] 10
+            </app-code> 
+<h4>Ejercicio</h4>
+<p>Calcule la varianza de los siguientes datos muestrales: 6, 8, 7, 10, 3, 5, 9, 8</p>
+<h4>Solución:</h4>
+<p>De acuerdo a los datos del problema tenemos:</p>
+<ul><li><strong>Σxᵢ:</strong> 56</li><li>
+    <strong>N:</strong> 8</li><li>
+            <strong><em>x̄</em>:</strong> 7</li>
+            <li><strong>Σ(xᵢ – x̄)²: </strong>36</li>
+        </ul>
+        <p>Finalmente calculamos la varianza muestral:</p>
+        <h4>$$S^2=36/7=5.1429$$</h4>
+<h4>Solución en Rstudio:</h4>
+<app-code  ngPreserveWhitespaces ngNonBindable lang="markup">
+Datos <- c(6,8,7,10,3,5,9,8)
+var (datos, na.rm = FALSE)
+        </app-code>
+        <app-code  ngPreserveWhitespaces ngNonBindable lang="markup">
+## [1] 5.142857
+</app-code> 
+</div>
+</div>
+</div>

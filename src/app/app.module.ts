@@ -145,6 +145,9 @@ import { DiferenciaDeMediasComponent } from './components/diferencia-de-medias/d
 import { DistribucionesMuestralesComponent } from './distribuciones-muestrales/distribuciones-muestrales.component';
 import { UnaProporcionComponent } from './distribuciones-muestrales/proporcion/una-proporcion/una-proporcion.component';
 import { DiferenciaProporcionesComponent } from './distribuciones-muestrales/proporcion/diferencia-proporciones/diferencia-proporciones.component';
+import { UnaVarianzaComponent } from './distribuciones-muestrales/varianza/una-varianza/una-varianza.component';
+import { RazonVarianzasComponent } from './distribuciones-muestrales/varianza/razon-varianzas/razon-varianzas.component';
+import { DesigualdadChebyshevComponent } from './distribuciones-muestrales/desigualdad-chebyshev/desigualdad-chebyshev.component';
 
 @NgModule({
     imports: [
@@ -283,6 +286,9 @@ import { DiferenciaProporcionesComponent } from './distribuciones-muestrales/pro
         DistribucionesMuestralesComponent,
         UnaProporcionComponent,
         DiferenciaProporcionesComponent,
+        UnaVarianzaComponent,
+        RazonVarianzasComponent,
+        DesigualdadChebyshevComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

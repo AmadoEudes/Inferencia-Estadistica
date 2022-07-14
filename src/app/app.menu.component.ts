@@ -12,7 +12,7 @@ import { AppMainComponent } from './app.main.component';
                         <li app-menuitem *ngFor="let child of item.items" [item]="child" [index]="i" role="none"></li>
                     </ul>
                 </li>
-                
+
             </ul>
         </div>
     `
@@ -39,7 +39,7 @@ export class AppMenuComponent implements OnInit {
                         label: 'Distribuciones Muestrales', icon: 'pi pi-fw pi-bookmark',
                         items: [
                             {
-                                label: 'Introducción', icon: 'pi pi-fw pi-bookmark',routerLink: ['/dist-muestral/una-proporcion'],
+                                label: 'Introducción', icon: 'pi pi-fw pi-bookmark',routerLink: ['/dist-muestral'],
                                 
                             },
                             {
@@ -47,7 +47,7 @@ export class AppMenuComponent implements OnInit {
                                 items: [
                                     {label: 'Población Infinita', icon: 'pi pi-fw pi-bookmark'},
                                     {label: 'Población finita', icon: 'pi pi-fw pi-bookmark'},
-                                    {label: 'Diferencia de Medias', icon: 'pi pi-fw pi-bookmark'},
+                                    {label: 'Diferencia de Medias', icon: 'pi pi-fw pi-bookmark', routerLink: ['/dist-muestral/diferenciaMedias']},
                                 ]
                             },
                             {
@@ -60,12 +60,12 @@ export class AppMenuComponent implements OnInit {
                             {
                                 label: 'La varianza', icon: 'pi pi-fw pi-bookmark',
                                 items: [
-                                    {label: 'Para una Varianza', icon: 'pi pi-fw pi-bookmark'},
-                                    {label: 'Razón de dos Varianzas', icon: 'pi pi-fw pi-bookmark'},
+                                    {label: 'Para una Varianza', icon: 'pi pi-fw pi-bookmark', routerLink: ['/dist-muestral/una-varianza']},
+                                    {label: 'Razón de dos Varianzas', icon: 'pi pi-fw pi-bookmark', routerLink: ['/dist-muestral/razon-varianzas']},
                                 ]
                             },
                             {
-                                label: 'Desigualdad de Chebyshev', icon: 'pi pi-fw pi-bookmark',
+                                label: 'Desigualdad de Chebyshev', icon: 'pi pi-fw pi-bookmark', routerLink: ['/dist-muestral/desigualdad-chebyshev'],
                             },
                             
                         ]
@@ -120,56 +120,13 @@ export class AppMenuComponent implements OnInit {
                     {label: 'Empty', icon: 'pi pi-fw pi-circle', routerLink: ['/pages/empty']}
                 ]
             },
-            {
-                label: 'Hierarchy',
-                items: [
-                    {
-                        label: 'Distribucion Muestral', icon: 'pi pi-fw pi-bookmark',
-                        items: [
-                            {
-                                label: 'Submenu 1.1', icon: 'pi pi-fw pi-bookmark',
-                                items: [
-                                    {label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark',routerLink: ['/distribucionMuestral']},
-                                    {label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark'},
-                                    {label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark', routerLink: ['/']},
-                                    {label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark', routerLink: ['/pages/submenu']},
-                                    {label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark'},
-                                ]
-                            },
-                            {
-                                label: 'Submenu 1.2', icon: 'pi pi-fw pi-bookmark',
-                                items: [
-                                    {label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark'}
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        label: 'Submenu 2', icon: 'pi pi-fw pi-bookmark',
-                        items: [
-                            {
-                                label: 'Submenu 2.1', icon: 'pi pi-fw pi-bookmark',
-                                items: [
-                                    {label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-bookmark'},
-                                    {label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-bookmark'},
-                                ]
-                            },
-                            {
-                                label: 'Submenu 2.2', icon: 'pi pi-fw pi-bookmark',
-                                items: [
-                                    {label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-bookmark'},
-                                ]
-                            },
-                        ]
-                    }
-                ]
-            },
+            
             
             {
                 label:'Get Started',
                 items:[
                     {
-                        label: 'Sobre Nosotros', icon: 'pi pi-users', routerLink: ['/documentation']
+                        label: 'Documentation', icon: 'pi pi-fw pi-question', routerLink: ['/documentation']
                     },
                     {
                         label: 'View Source', icon: 'pi pi-fw pi-search', url: ['https://github.com/primefaces/sakai-ng'], target: '_blank'

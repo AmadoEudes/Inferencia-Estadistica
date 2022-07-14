@@ -33,6 +33,9 @@ import { DiferenciaDeMediasComponent} from './components/diferencia-de-medias/di
 
 import { UnaProporcionComponent } from './distribuciones-muestrales/proporcion/una-proporcion/una-proporcion.component';
 import { DiferenciaProporcionesComponent } from './distribuciones-muestrales/proporcion/diferencia-proporciones/diferencia-proporciones.component';
+import { UnaVarianzaComponent } from './distribuciones-muestrales/varianza/una-varianza/una-varianza.component';
+import { RazonVarianzasComponent } from './distribuciones-muestrales/varianza/razon-varianzas/razon-varianzas.component';
+import { DesigualdadChebyshevComponent } from './distribuciones-muestrales/desigualdad-chebyshev/desigualdad-chebyshev.component';
 @NgModule({
     imports: [
         RouterModule.forRoot([
@@ -62,12 +65,20 @@ import { DiferenciaProporcionesComponent } from './distribuciones-muestrales/pro
                     {path: 'icons', component: IconsComponent},
                     {path: 'blocks', component: BlocksComponent},
                     {path: 'documentation', component: DocumentationComponent},
-                    {path: 'distribucionMuestral',component: DistribucionMuestralComponent},
-                    {path: 'diferenciaMedias',component: DiferenciaDeMediasComponent},
+
+                    {path: 'dist-muestral',component: DistribucionMuestralComponent},
+
+                    {path: 'dist-muestral/diferenciaMedias',component: DiferenciaDeMediasComponent},
+                    
                     {path: 'documentation', component: DocumentationComponent},
 
                     {path: 'dist-muestral/una-proporcion', component: UnaProporcionComponent},
                     {path: 'dist-muestral/diferencia-proporciones', component: DiferenciaProporcionesComponent},
+
+                    
+                    {path: 'dist-muestral/una-varianza', component: UnaVarianzaComponent},
+                    {path: 'dist-muestral/razon-varianzas', component: FormLayoutComponent},
+                    {path: 'dist-muestral/desigualdad-chebyshev', component: DesigualdadChebyshevComponent},
 
                 ],
             },
